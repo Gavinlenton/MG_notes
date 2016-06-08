@@ -1,0 +1,74 @@
+Notes from the Python course 
+
+Bash:
+man + argument opens a help directory
+
+cd changes directory of bash and ls is a way of listing all files in current directory
+
+Tab completion: tab for the command lines that you can run
+
+- cd with no arguments takes you to home directory
+- pwd prints the working directory (gives full path)
+- ~ expand out to home directory - good if you have different computers with different home directories
+- -F after ls adds a forward slash after
+- -ls All displays all files in directory
+    - . changes directory to itself (use to refer to file in current directory if you want to specify full file (e.g., ./molecules/)
+    - .. changes directory up one level
+- Command people to open a file
+
+File (filename) tells you what is contained within the file (e.g., the type).
+Less tries to look at the file nicely (e.g., show contents) - fn + Q closes the file
+
+Making directories
+Folder
+mkdir makes a directory with the argument specified
+Or can specify the full path after mkdir
+rmdir (argument) deletes the folder specified by the argument
+mv (argument1) (argument2) moves the directory from argument1 to argument2
+cp old new copies a file to the new name
+
+File
+rm (file) deletes the file
+vim (argument) creates a .txt file (e.g., vim drafts.txt)
+
+VIM - :q to quit
+i to insert text
+:wq to write file and then quit
+
+ Special characters
+ls *.(filetype) expands only files of that type - will use this often
+ls ?(filetype) matches only one character - will not use this often
+> is the redirector command, which overwrites the file
+>> appends the text to a file
+< is the input (not used often) (e.g., cat < saves.txt)
+| pipes. Use | to add commands onto the pipeline -e.g., execute a number of things on the same line
+find - search (e.g., find . )
+find . | grep unicorn (find the ones with unicorn).
+find . -name *.txt
+grep - search for a pattern or something in a string.
+
+wc = wordcount (how many characters, lines, and words in a file). E.g., wc *.pdb for file extension with .pdb
+cat = shows file in the terminal
+
+wc -l *.pdb > lengths - outputs to a file named “lengths” instead of the bash
+
+echo - outputs text to the screen
+e.g., echo “this is text.” > saves.txt
+
+Looping
+$ to tell loop to reference the filename
+${filename}text - looks for filename and adds on text
+Put an echo to print what the for loop will do without executing
+
+Best to write long for-loops in a text editor
+save as script.sh for clarity
+bash + script runs the file
+
+for filename in *.dat
+do...
+echo
+     head -n 1 $filename
+done
+
+IMPORTANT
+To run a script and have it make changes put a ‘.’ at the front and then call the script

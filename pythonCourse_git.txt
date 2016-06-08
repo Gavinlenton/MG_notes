@@ -1,0 +1,63 @@
+Git notes
+
+Keep a copy of any code/text (e.g., thesis)
+
+git config - - global user.name “Name"
+git config - - global user.email
+
+CREATE NEW REPOSITORY
+git init to initialise git
+ls -a to check if git folder is there
+
+git status - what is going on in the project - check if there are files not saved/committed
+
+When changes are made:
+
+ADD FILE
+git add “filename” to add file to repository
+
+COMMIT FILE
+git commit -m “comment about file commit"
+
+OR
+
+- To auto add and commit file change
+
+git commit -am “comment about file"
+
+END
+
+git log to see changes made
+
+TO COMPARE DIFFERENCES
+git add filename
+git diff - -staged - compares file in repository against one in folder - highlights the changes between the two
+
+Head is the current commit - there’s a commit id for every commit made (use at least 8 characters)
+Can go back with Head~1
+Or Head~2
+e.g., git diff HEAD~1 mars.txt
+
+MISTAKES MADE - revert to previous
+git checkout HEAD mars.txt
+
+If you lose your head (e.g., git checkout “some previous version", go to > git checkout master
+
+GIT IGNORE
+.gitignore in same folder as .git to ignore certain files or folder types from repository
+
+GIT REMOTE REPOSITORIES
+set up a remote
+git remote add origin url copied (e.g., https://github.com/Gavinlenton/planets-github-gl.git)
+origin = local repository that I am currently working on
+
+git remote -v to list remote repositories set up
+fetch = pulling down from repository
+push = pushing up to repository
+
+push data from local to remote
+git push origin master
+Pull data from remote to master
+git pull origin master
+Clone repository
+git clone “html to repository"

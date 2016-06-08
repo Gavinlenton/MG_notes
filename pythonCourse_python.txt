@@ -1,0 +1,125 @@
+
+Online Documentation 
+
+Doc.python.org/3/library/exceptions.html - doc for errors in code
+pipit.python.org to list different libraries, topics, code etc.
+
+CONNECTING TO JUPYTER
+ctrl+c to kill Jupyter notebooks
+
+in bash type jupyter notebook
+In the html click on new > terminal
+new > Python 3
+
+# to comment
+
+Import a library of functions called ‘numpy'
+import numpy
+import glob - package to import data of one type
+print(glob.glob(data*.dataending)
+
+CREATING A FUNCTION
+
+def = defining a function
+def functionName
+e.g., def fahr_to_kelv(temp)
+return is the output of the function
+
+numpy.loadtxt(fname= ‘’, delimiter=‘,’)
+
+load a txt file using numpy
+print(variable) to print value of variable
+
+- whos prints out the variables created in the session
+- type tells you what type of data is stored in variable
+- data.shape tells you column and rows
+- Python starts counting rows and columns from 0, not 1
+
+axis
+row = 0
+col = 1
+E.g., print(data.mean(axis=1))
+prints the mean for each column
+len = length of variable
+-1 in a variable index’s to the final
+del = delete
+dir(variable) provides a list of all functions that can be used on that variable
+
+Creating new variables
+list(variable) creates a copy of the variable that IS separate
+
+variable1 = variable2 creates a variable1 that is the same as variable2
+IF YOU CHANGE VARIABLE1 IT ALSO CHANGES VARIABLE2
+
+Library - group of functions that somebody has written and put online
+Import library and then use it
+
+Loops
+e.g.,
+word = lead
+for char in word:
+     print(char)
+- No need to end the for loop
+- Remember to include a colon (:) after the first line of for loop (e.g., for blah blah: )
+
+spacing is very important
+
+Conditional statements
+if
+elif (elseif)
+else
+
+Function creation
+Always create a doc string at the beginning of the function you create
+Enclosed in ‘’’ Inset documentation here ‘''
+always have four spaces before ‘for’ when writing for loops
+
+*Test function with a small dataset that has a known output*
+
+Defining defaults for parameters
+Unless using all arguments in a function, make sure to name the argument
+pre-defined defaults in a function will pass defaults if no arguments are specified
+
+open in write mode  - if it doesn’t exist a new file will be created
+open in read mode - if it doesn’t exist there will be an error
+
+Assertions
+“Fail fast, fail early"
+Way to make sure a function is doing what they should be at certain sections in the code
+Important when creating code
+
+assert
+condition,
+“Error message"
+
+Dictionary
+Key-based access
+dict_one = dict(enumerate([‘item one’, ‘item two’]))
+dict_two = {‘firstname’ : ‘Heidi’}
+dict_three = dict(name = ‘test’)
+
+dict_one.keys = dict_keys([0,1])
+
+Command-line programming with Python
+python takes you into python interactive mode
+quit() - graceful method of quitting
+sys.argv to list arguments being passed - the first argument is always the script being run
+
+python + name of file
+When running file always use python + name of file,  then arguments in file. Multiple arguments are separated by whitespace.
+
+Main processing of file should be in a function called ‘main'
+
+remember to call the function ‘main’ at the end of the script
+
+Allow function to handle flags (e.g., -min, -mean, -max, -V, —help)
+- Call action before processing files
+
+Python
+     Script
+          —flag
+               Files
+
+Can comment out functions with the script to test certain functions within that script
+Then jump into python interactive dev mode (e.g., type ‘python’)
+Then import script name (e.g., ‘readings04’)
